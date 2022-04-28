@@ -1,0 +1,77 @@
+.login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 420px;
+    max-width: 420px;
+    height: 70%;
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-card  h1 {
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 1rem;
+    color: #61917d;
+}
+
+.form-group {
+    width: 90%;
+    height: 70%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: #D0D0D7;
+    border-radius: 4px;
+    border: solid 1px #000;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    align-items: center;
+    height: 30%;
+}
+
+input[type="text"] {
+    border: none;
+    font-size: 18px;
+    padding: 8px 8px; 
+}
+
+input[type="text"]:focus {
+    border: none;
+    outline: none;
+}
+
+#new-game {
+    background-color: #4b997a;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    width: 60%;
+}
+
+#new-game:hover {
+    outline: 3px solid #29493C;
+    transition: all ease .3s;
+}
