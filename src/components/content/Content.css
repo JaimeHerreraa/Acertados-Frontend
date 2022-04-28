@@ -1,0 +1,30 @@
+.questions-container {
+    width: 70%;
+    height: 60%;
+    margin: 16px auto;
+    padding: 16px;
+    background-color: #D0D0D7;
+    border: 2px solid #fff;
+    border-radius: 4px;
+}
+
+.question {
+    padding: 8px;
+}
+
+.description {
+    color: #4c836c;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.choice-group {
+    display: block;
+    margin-bottom: 16px;
+}
+
+label {
+    font-weight: 500;
+    margin-left: 8px;
+}
