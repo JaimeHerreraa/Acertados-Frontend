@@ -1,0 +1,47 @@
+.buttons-container {
+    width: 100%;
+    margin: 16px auto;
+    padding: 16px;
+    border-radius: 4px;
+    border: solid 2px #fff;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+#leave {
+    background-color: rgb(206, 57, 57);
+    padding: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+
+#leave:hover {
+    outline: 3px solid rgb(202, 9, 9);
+    transition: all ease .3s;
+}
+
+#next {
+    background-color: rgb(53, 175, 53);
+    padding: 6px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+}
+
+#next:hover {
+    outline: 3px solid rgb(12, 146, 12);
+    transition: all ease .3s;
+}
+
+.container-leave,
+.container-next {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}

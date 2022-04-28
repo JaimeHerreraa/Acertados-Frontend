@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Content.css';
+import Option from '../option/Option';
 
 function Content() {
     const [selectedValue, setSelectedValue] = useState()
@@ -32,6 +33,7 @@ function Content() {
                         <label htmlFor={'choice-four'}>No compilado</label>
                     </div>
 
+                    <Option/>
                 </form>
             </div>
         </div>
