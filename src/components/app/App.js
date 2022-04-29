@@ -1,14 +1,19 @@
-import './App.css';
-import Login from '../login/Login';
-import Header from '../header/Header';
-import Content from '../content/Content';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from '../pages/login/Login';
+import Game from '../pages/game/Game';
+
+
 
 function App() {
+  
   return (
-    <div className="app">
-        <Header/>
-        <Content/>
-    </div>
+        <BrowserRouter>
+          <Routes>
+            <Route index element={<Login/>}/>
+            <Route path={'game'} element={<Game/>}/>
+            <Route path="*" />
+          </Routes>
+        </BrowserRouter>
   );
 }
 
