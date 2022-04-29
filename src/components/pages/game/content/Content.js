@@ -2,38 +2,29 @@ import { useState } from 'react';
 import './Content.css';
 import Option from '../option/Option';
 
-function Content() {
-    const [selectedValue, setSelectedValue] = useState()
-    const onValueChange = (event) => {
-        setSelectedValue(event.target.value);
+
+function Content({question, handleAnswer}) {
+    const [selectedValue, setSelectedValue] = useState(question.choices[0])
+    const onValueChange = (event) => { 
+        const {name, value} = event.target;
+        setSelectedValue({
+            id: value,
+            value: name
+        });
     }
+
     return (
         <div className={'questions-container'}>
             <div className={'question'}>
-                <p className={'description'}>Javascript es un lenguaje: </p>
+                <p className={'description'}>{question.description}</p>
                 <form className={'options'}>
-
-                    <div className={'choice-group'}>
-                        <input type={'radio'} id={'choice-one'} value={'Compilado'}  checked={selectedValue === 'Compilado'} onChange={onValueChange}/>
-                        <label htmlFor={'choice-one'}>Compilado</label>
-                    </div>
-
-                    <div className={'choice-group'}>
-                        <input type={'radio'} id={'choice-two'} value={'Interpretado'}  checked={selectedValue === 'Interpretado'} onChange={onValueChange}/>
-                        <label htmlFor={'choice-two'}>Interpretado</label>
-                    </div>
-
-                    <div className={'choice-group'}>
-                        <input type={'radio'} id={'choice-three'}value={'Hibrido'}  checked={selectedValue === 'Hibrido'} onChange={onValueChange}/>
-                        <label htmlFor={'choice-three'}>Hibrido</label>
-                    </div>
-
-                    <div className={'choice-group'}>
-                        <input type={'radio'} id={'choice-four'} value={'No Compilado'} checked={selectedValue === 'No Compilado'} onChange={onValueChange}/>
-                        <label htmlFor={'choice-four'}>No compilado</label>
-                    </div>
-
-                    <Option/>
+                    {question.choices.map(choice => {
+                        return <div className={'choice-group'}  key={choice.id}>
+                                    <input type={'radio'} id={choice.id} value={choice.id} name={choice.value} checked={selectedValue.id == choice.id} onChange={onValueChange}/>
+                                    <label htmlFor={choice.id}>{choice.value}</label>
+                                </div>
+                    })}
+                    <Option choiceValue={selectedValue} questionId={question.id} handleAnswer={handleAnswer}/>
                 </form>
             </div>
         </div>

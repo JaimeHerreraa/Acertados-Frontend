@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './Login.css';
 import userIcon from './user-circle.svg';
-import localprovaider from '../../../providers/localstorage';
+import localProvaider from '../../../providers/localstorage';
+import { Link } from "react-router-dom";
 
 function Login() {
 
@@ -11,8 +12,9 @@ function Login() {
     }
 
     const handleClick = () => {
-        localprovaider.saveUser();
-        
+        localProvaider.saveUser();
+        localProvaider.saveCategory();
+        localProvaider.saveScore();
     }
 
     return(
@@ -25,7 +27,9 @@ function Login() {
                             <img src={userIcon} alt='user-icon'/>
                             <input type={'text'} id={'username'} placeholder='Ingresa un nombre' value={user} onChange={onValueChange}></input>
                         </div>
-                        <button id={'new-game'} onClick={handleClick} >Iniciar Juego</button>
+                        <button id={'new-game'} onClick={handleClick} >
+                            <Link className={'link'} to="/game">Iniciar Juego</Link>
+                        </button>
                     </div>
                 </div>
             </div>

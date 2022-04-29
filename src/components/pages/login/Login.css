@@ -72,9 +72,7 @@ input[type="text"]:focus {
 
 #new-game {
     background-color: #4b997a;
-    color: #fff;
     padding: 10px;
-    font-size: 18px;
     border: none;
     border-radius: 4px;
     width: 60%;
@@ -83,4 +81,10 @@ input[type="text"]:focus {
 #new-game:hover {
     outline: 3px solid #29493C;
     transition: all ease .3s;
+}
+
+.link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
 }
