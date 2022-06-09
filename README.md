@@ -22,6 +22,13 @@ Se debe asegurar que se encuentre en el directorio raíz del proyecto el cual es
 npm install
 ```
 
+## Funcionamiento del proyecto
+Es necesario un último comando para que nuestra aplicación se ponga en funcionamiento, el cual es:
+
+```shell
+npm run start
+```
+
 ## Nota:
 Es importante que tanto la base de datos y la API estén en ejecución para que la aplicación Frontend pueda ejecutarse correctamente.
 
